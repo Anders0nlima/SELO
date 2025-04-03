@@ -1,0 +1,163 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 10px;
+    background: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  
+  .navbar.open {
+    background: black;
+  }
+  
+  .menu_icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  
+  .search_icon{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9;
+  }
+
+  .menu_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    color: white;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); /* Gradiente sutil */
+    backdrop-filter: blur(5px); /* Efeito de desfoque moderno */
+}
+
+.footer_left {
+    display: flex;
+    flex-wrap: wrap; /* Links quebram para próxima linha se necessário */
+    gap: 15px 30px; /* 15px vertical, 30px horizontal */
+    padding: 10px 0;
+}
+
+.footer_left a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.footer_left a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer_left a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.footer_left a:hover::after {
+    width: 100%;
+}
+
+.footer_right {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.footer_right a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.footer_right a:hover {
+    color: white;
+    transform: translateY(-3px) scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu_footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    
+    .footer_left {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .footer_right {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .footer_left a {
+        font-size: 0.9rem;
+    }
+    
+    .footer_right a {
+        font-size: 1.1rem;
+        width: 32px;
+        height: 32px;
+    }
+}

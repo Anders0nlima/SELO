@@ -1,10 +1,12 @@
 import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
-    <h1>
-    SELO
-    </h1>
+   <BrowserRouter>
+   <MainPage/>
+   </BrowserRouter>
   )
 }
 
