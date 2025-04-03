@@ -81,3 +81,32 @@
   font-size: 16px;
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Empilhar em telas pequenas */
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .cartaz img {
+    margin-left: 0;
+    max-width: 350px;
+  }
+  
+  .textos {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .textos h1::after {
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha */
+    width: 80px; /* Opcional: aumentar a largura para melhor visualização */
+  }
+  
+  .textos h2::after {
+    left: 50%;
+    transform: translateX(-50%); /* Centralizar a linha decorativa */
+  }
+}

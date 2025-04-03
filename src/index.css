@@ -133,3 +133,20 @@ body, html {
   z-index: 1;
 }
 
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .video-background,
+  .video-section {
+    height: 80vh;
+  }
+  
+  /* Ajuste opcional para os links */
+  .links-container {
+    bottom: 10px;
+  }
+  
+  .video-link img {
+    width: 80px;
+  }
+}

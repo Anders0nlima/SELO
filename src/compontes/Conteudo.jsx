@@ -1,6 +1,8 @@
 import styles from "./Conteudo.module.css";
 import cartaz from "../assets/cartaz.jpg";
 import Cards from "./Cards";
+import CardsNegocios from "./CardsNegocios";
+import Footer from "./Footer";
 
 function Conteudo(){
     return(
@@ -23,6 +25,8 @@ function Conteudo(){
       </div>
 
       <Cards/>
+      <CardsNegocios/>
+      <Footer/>
         </>
     )
 }
